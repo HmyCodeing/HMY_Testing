@@ -2,16 +2,16 @@
         Github(全球最牛的开源项目托管平台，没有之一)
         Gitlab(对代码私有性支持较好，因此企业用户较多)
         Gitee(又叫做码云，是国产的开源项目托管平台。访问速度快，纯中文界面，使用友好)
-    以上三个开源项目托管平台，只能托管以Git管理的项目源代码，因此，它们的名字都是以Git开头 -->
+        以上三个开源项目托管平台，只能托管以Git管理的项目源代码，因此，它们的名字都是以Git开头 -->
 
 <!-- 什么是Github
         Github是全球最大的开源项目托管平台。在Github中，你可以：
-            1、关注自己喜欢的开源项目，为其点赞打call
-            2、为自己喜欢的开源项目做贡献(Pull Request)
-            3、和开源项目的作者讨论Bug和提需求(Issues)
-            4、把喜欢的项目复制一份作为自己的项目进行修改(Fork)
-            5、创建属于自己的开源项目
-            6、...... -->
+                1、关注自己喜欢的开源项目，为其点赞打call
+                2、为自己喜欢的开源项目做贡献(Pull Request)
+                3、和开源项目的作者讨论Bug和提需求(Issues)
+                4、把喜欢的项目复制一份作为自己的项目进行修改(Fork)
+                5、创建属于自己的开源项目
+                6、...... -->
 
 
 <!-- 1、远程创建仓库 -->
@@ -19,4 +19,19 @@
         (1) HTTPS：零配置；但是每次访问仓库时，需要重复输入Github的账号和密码才能访问成功
         (2) SSH：需要进行额外的配置；但是配置成功后，每次访问仓库时，不需要重复输入Github的账号和密码
         实际开发中，推荐使用SSH -->
-<!-- 3、基于HTTPS将本地仓库上传到Github -->
+<!-- 3、基于HTTPS将本地仓库上传到Github
+        第一次将本地代码上传到Github
+                1、本地没有现成的Git仓库
+                        echo "# HMY_test2" >> README.md    //使用终端命令创建README.md文档，并写入初始内容为# HMY_test2
+                        git init
+                        git add README.md
+                        git commit -m "first commit"       //第二行到第四行是初始化本地Git仓库，并将文件的修改提交到本地的Git仓库
+                        git branch -M main
+                        git remote add origin https://github.com/HmyCodeing/HMY_test2.git       //将本地仓库和远程仓库进行关联，并将远程仓库命名为origin
+                        git push -u origin main            //将本地仓库中的内容推送到远程的origin仓库中
+                2、本地有现成的Git仓库
+                        git remote add origin https://github.com/HmyCodeing/HMY_test2.git       //将本地仓库和远程仓库进行关联，并将远程仓库命名为origin
+                        git branch -M main
+                        git push -u origin main            //将本地仓库中的内容推送到远程的origin仓库中
+        此后将本地仓库上传到Github(实现将本地代码提交到本地仓库中)
+                git push -->
